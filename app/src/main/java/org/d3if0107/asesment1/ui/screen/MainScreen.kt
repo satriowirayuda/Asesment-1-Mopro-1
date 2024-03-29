@@ -14,9 +14,12 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
@@ -63,8 +66,11 @@ fun MainScreen() {
 @Composable
 fun ScreenContent(modifier: Modifier) {
     var namaCustomer by remember { mutableStateOf("") }
+    var namaCustomerEror by remember { mutableStateOf(false) }
     var nomerCustomer by remember { mutableStateOf("") }
+    var nomerCustomerEror by remember { mutableStateOf(false) }
     var jumlahSepatu by remember { mutableStateOf("") }
+    var jumlahSepatuEror by remember { mutableStateOf(false) }
 
     var totalHarga by remember { mutableStateOf("") }
 
@@ -91,6 +97,9 @@ fun ScreenContent(modifier: Modifier) {
             value = namaCustomer,
             onValueChange = { namaCustomer = it },
             label = { Text(text = stringResource(id = R.string.nama_customer)) },
+            trailingIcon = { IconPicker(isError = namaCustomerEror, unit = "")},
+            isError = namaCustomerEror,
+            supportingText = { ErorHint(isEror = namaCustomerEror)},
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 capitalization = KeyboardCapitalization.Words,
@@ -103,6 +112,9 @@ fun ScreenContent(modifier: Modifier) {
             value = nomerCustomer,
             onValueChange = { nomerCustomer = it },
             label = { Text(text = stringResource(id = R.string.nomer_customer)) },
+            isError = nomerCustomerEror,
+            trailingIcon = { IconPicker(isError = nomerCustomerEror, unit = "")},
+            supportingText = { ErorHint(isEror = nomerCustomerEror)},
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
@@ -114,7 +126,9 @@ fun ScreenContent(modifier: Modifier) {
             value = jumlahSepatu,
             onValueChange = { jumlahSepatu = it },
             label = { Text(text = stringResource(id = R.string.jumlah_sepatu)) },
-            trailingIcon = { Text(text = "pcs") },
+            isError = jumlahSepatuEror,
+            trailingIcon = { IconPicker(isError = jumlahSepatuEror, unit = "pcs") },
+            supportingText = { ErorHint(isEror = jumlahSepatuEror)},
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
@@ -142,10 +156,10 @@ fun ScreenContent(modifier: Modifier) {
                 )
             }
         }
-        Row (
+        Row(
             modifier = Modifier.padding(top = 8.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ){
+        ) {
             Button(
                 onClick = {
                     namaCustomer = ""
@@ -161,6 +175,11 @@ fun ScreenContent(modifier: Modifier) {
             }
             Button(
                 onClick = {
+                    namaCustomerEror = namaCustomer == "" || namaCustomer == "0"
+                    nomerCustomerEror = nomerCustomer == "" || nomerCustomer == "0"
+                    jumlahSepatuEror = jumlahSepatu == "" || jumlahSepatu == "0"
+                    if (namaCustomerEror || nomerCustomerEror || jumlahSepatuEror) return@Button
+
                     val hargaSepatu = 20000
                     val jumlahSepatuInt = jumlahSepatu.toIntOrNull() ?: 0
                     val hargaLamaPengerjaan = when (day) {
@@ -203,6 +222,22 @@ fun ScreenContent(modifier: Modifier) {
                 modifier = Modifier.padding(top = 8.dp)
             )
         }
+    }
+}
+
+@Composable
+fun IconPicker(isError: Boolean, unit: String) {
+    if (isError) {
+        Icon(imageVector = Icons.Filled.Warning, contentDescription = null)
+    } else {
+        Text(text = unit)
+    }
+}
+
+@Composable
+fun ErorHint(isEror: Boolean) {
+    if (isEror) {
+        Text(text = stringResource(R.string.input_invalid))
     }
 }
 

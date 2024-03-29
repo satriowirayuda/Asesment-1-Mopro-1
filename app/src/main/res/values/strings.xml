@@ -13,6 +13,8 @@
     <string name="lama_pengerjaan" translatable="false">Lama Pengerjaan: </string>
     <string name="total" translatable="false">Total Harga: </string>
     <string name="reset" translatable="false">Reset</string>
+    <string name="input_invalid" translatable="false">Tidak Boleh Kosong!</string>
+
 
 
 
