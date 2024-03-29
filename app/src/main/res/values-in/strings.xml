@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cuci Sepatu</string>
+    <string name="hari_1">1 Hari</string>
+    <string name="hari_2">2 Hari</string>
+    <string name="hari_3">3 Hari</string>
+    <string name="laundry_intro">Selamat datang di Laundry Sepatu C.IYOK!!  Masukan Data Customer dan Lama Pengerjaan yang diinginkan!!</string>
+    <string name="nama_customer">Nama Customer</string>
+    <string name="nomer_customer">Nomer Customer</string>
+    <string name="jumlah_sepatu">Jumlah Sepatu</string>
+    <string name="hitung">Hitung Total</string>
+    <string name="nama_customer_x">Nama Customer:</string>
+    <string name="nomer_customer_x">Nomer Customer:</string>
+    <string name="lama_pengerjaan">"Lama Pengerjaan: "</string>
+    <string name="total">"Total Harga: "</string>
+    <string name="reset">Reset</string>
+    <string name="input_invalid">Tidak Boleh Kosong!</string>
 </resources>

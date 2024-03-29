@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laundry Shoes</string>
+    <string name="hari_1">1 Day</string>
+    <string name="hari_2">2 Day</string>
+    <string name="hari_3">3 Day</string>
+    <string name="laundry_intro">Welcome to C.IYOK Shoe Laundry!!\n\nEnter customer data and desired work time!!</string>
+    <string name="nama_customer">Customer Name</string>
+    <string name="nomer_customer">Customer Number</string>
+    <string name="jumlah_sepatu">Shoes amount</string>
+    <string name="hitung">Calculate Total</string>
+    <string name="nama_customer_x">Customer Name :</string>
+    <string name="nomer_customer_x">Customer Number:</string>
+    <string name="lama_pengerjaan">Work duration:</string>
+    <string name="total">Total price:</string>
+    <string name="reset">Reset</string>
+    <string name="input_invalid">Can not be empty!</string>
+</resources>
