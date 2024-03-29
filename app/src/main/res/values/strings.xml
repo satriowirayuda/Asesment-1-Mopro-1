@@ -7,7 +7,13 @@
     <string name="hari_1" translatable="false">1 Hari</string>
     <string name="hari_2" translatable="false">2 Hari</string>
     <string name="hari_3" translatable="false">3 Hari</string>
-    <string name="hitung" translatable="false">Hitung Totals</string>
+    <string name="hitung" translatable="false">Hitung Total</string>
+    <string name="nama_customer_x" translatable="false">Nama Customer: </string>
+    <string name="nomer_customer_x" translatable="false">Nomer Customer: </string>
+    <string name="lama_pengerjaan" translatable="false">Lama Pengerjaan: </string>
+    <string name="total" translatable="false">Total Harga: </string>
+    <string name="reset" translatable="false">Reset</string>
+
 
 
 </resources>
