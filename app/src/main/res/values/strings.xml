@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Laundry Sepatu</string>
+    <string name="laundry_intro" translatable="false">Selamat datang di Laundry Sepatu C.IYOK!!\n\nMasukan Data Customer dan Lama Pengerjaan yang diinginkan!!</string>
+    <string name="nama_customer" translatable="false">Nama Customer</string>
+    <string name="nomer_customer" translatable="false">Nomer Customer</string>
+    <string name="jumlah_sepatu" translatable="false">Jumlah Sepatu</string>
+    <string name="hari_1" translatable="false">1 Hari</string>
+    <string name="hari_2" translatable="false">2 Hari</string>
+    <string name="hari_3" translatable="false">3 Hari</string>
+    <string name="hitung" translatable="false">Hitung Totals</string>
+
+
 </resources>
