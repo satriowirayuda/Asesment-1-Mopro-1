@@ -97,9 +97,9 @@ fun ScreenContent(modifier: Modifier) {
             value = namaCustomer,
             onValueChange = { namaCustomer = it },
             label = { Text(text = stringResource(id = R.string.nama_customer)) },
-            trailingIcon = { IconPicker(isError = namaCustomerEror, unit = "")},
+            trailingIcon = { IconPicker(isError = namaCustomerEror, unit = "") },
             isError = namaCustomerEror,
-            supportingText = { ErorHint(isEror = namaCustomerEror)},
+            supportingText = { ErorHint(isEror = namaCustomerEror) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 capitalization = KeyboardCapitalization.Words,
@@ -113,8 +113,8 @@ fun ScreenContent(modifier: Modifier) {
             onValueChange = { nomerCustomer = it },
             label = { Text(text = stringResource(id = R.string.nomer_customer)) },
             isError = nomerCustomerEror,
-            trailingIcon = { IconPicker(isError = nomerCustomerEror, unit = "")},
-            supportingText = { ErorHint(isEror = nomerCustomerEror)},
+            trailingIcon = { IconPicker(isError = nomerCustomerEror, unit = "") },
+            supportingText = { ErorHint(isEror = nomerCustomerEror) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
@@ -128,7 +128,7 @@ fun ScreenContent(modifier: Modifier) {
             label = { Text(text = stringResource(id = R.string.jumlah_sepatu)) },
             isError = jumlahSepatuEror,
             trailingIcon = { IconPicker(isError = jumlahSepatuEror, unit = "pcs") },
-            supportingText = { ErorHint(isEror = jumlahSepatuEror)},
+            supportingText = { ErorHint(isEror = jumlahSepatuEror) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Number,
