@@ -15,4 +15,6 @@
     <string name="total">"Total Harga: "</string>
     <string name="reset">Reset</string>
     <string name="input_invalid">Tidak Boleh Kosong!</string>
+    <string name="tentang_aplikasi">Tentang Apliaksi</string>
+    <string name="copyright">C.IYOK merupakan aplikasi Android untuk Laundry Sepatu yang menyediakan beberapa layanan yang memuaskan.</string>
 </resources>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Laundry Sepatu</string>
-    <string name="laundry_intro" translatable="false">Selamat datang di Laundry Sepatu C.IYOK!!\n\nMasukan Data Customer dan Lama Pengerjaan yang diinginkan!!</string>
+    <string name="laundry_intro">Selamat datang di Laundry Sepatu C.IYOK!!\n\nMasukan Data Customer dan Lama Pengerjaan yang diinginkan!!</string>
     <string name="nama_customer">Nama Customer</string>
     <string name="nomer_customer">Nomer Customer</string>
     <string name="jumlah_sepatu">Jumlah Sepatu</string>
@@ -14,4 +14,6 @@
     <string name="total">Total Harga: </string>
     <string name="reset">Reset</string>
     <string name="input_invalid">Tidak Boleh Kosong!</string>
+    <string name="tentang_aplikasi">Tentang Apliaksi</string>
+    <string name="copyright">C.IYOK merupakan aplikasi Android untuk Laundry Sepatu yang menyediakan beberapa layanan yang memuaskan.</string>
 </resources>

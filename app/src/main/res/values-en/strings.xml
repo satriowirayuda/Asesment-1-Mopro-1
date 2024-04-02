@@ -15,4 +15,6 @@
     <string name="total">Total price:</string>
     <string name="reset">Reset</string>
     <string name="input_invalid">Can not be empty!</string>
+    <string name="tentang_aplikasi">About Application</string>
+    <string name="copyright">C.IYOK is an Android application for Shoe Laundry which provides several satisfying services.</string>
 </resources>
