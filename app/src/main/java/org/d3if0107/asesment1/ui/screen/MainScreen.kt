@@ -1,5 +1,7 @@
 package org.d3if0107.asesment1.ui.screen
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -37,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.ImeAction
@@ -90,6 +93,8 @@ fun ScreenContent(modifier: Modifier) {
     var jumlahSepatuEror by rememberSaveable { mutableStateOf(false) }
 
     var totalHarga by rememberSaveable { mutableStateOf("") }
+
+    val context = LocalContext.current
 
     val radioOptions = listOf(
         stringResource(id = R.string.hari_1),
@@ -229,6 +234,11 @@ fun ScreenContent(modifier: Modifier) {
                 modifier = Modifier.padding(top = 8.dp)
             )
             Text(
+                text = stringResource(id = R.string.jumlah_sepatu_x) + jumlahSepatu,
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier.padding(top = 8.dp)
+            )
+            Text(
                 text = stringResource(id = R.string.lama_pengerjaan) + day,
                 style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier.padding(top = 8.dp)
@@ -238,6 +248,25 @@ fun ScreenContent(modifier: Modifier) {
                 style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier.padding(top = 8.dp)
             )
+            Button(
+                onClick = {
+                    shareData(
+                        context = context,
+                        message = context.getString(
+                            R.string.bagikan_resi,
+                            namaCustomer,
+                            nomerCustomer,
+                            jumlahSepatu,
+                            day,
+                            totalHarga
+                        )
+                    )
+                },
+                modifier = Modifier.padding(top = 8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(id = R.string.bagikan))
+            }
         }
     }
 }
@@ -270,6 +299,16 @@ fun DayOption(label: String, isSelected: Boolean, modifier: Modifier) {
             style = MaterialTheme.typography.bodyLarge,
             modifier = Modifier.padding(start = 8.dp)
         )
+    }
+}
+
+private fun shareData(context: Context, message: String) {
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
     }
 }
 

@@ -11,6 +11,7 @@
     <string name="hitung">Hitung Total</string>
     <string name="nama_customer_x">Nama Customer:</string>
     <string name="nomer_customer_x">Nomer Customer:</string>
+    <string name="jumlah_sepatu_x">Jumlah Sepatu: </string>
     <string name="lama_pengerjaan">"Lama Pengerjaan: "</string>
     <string name="total">"Total Harga: "</string>
     <string name="reset">Reset</string>
@@ -18,4 +19,6 @@
     <string name="tentang_aplikasi">Tentang Apliaksi</string>
     <string name="copyright">C.IYOK merupakan aplikasi Android untuk Laundry Sepatu yang menyediakan beberapa layanan yang memuaskan.</string>
     <string name="kembali">Kembali</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_resi">Nama Costumer: %1$s\nNomer Customer: %2$s\nJumlah Sepatu: %3$s\nLama Pengerjaan: %4$s\nTotal Harga: %5$s</string>
 </resources>

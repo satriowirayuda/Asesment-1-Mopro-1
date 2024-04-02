@@ -11,6 +11,7 @@
     <string name="hitung">Calculate Total</string>
     <string name="nama_customer_x">Customer Name :</string>
     <string name="nomer_customer_x">Customer Number:</string>
+    <string name="jumlah_sepatu_x">Number of Shoes: </string>
     <string name="lama_pengerjaan">Work duration:</string>
     <string name="total">Total price:</string>
     <string name="reset">Reset</string>
@@ -18,4 +19,6 @@
     <string name="tentang_aplikasi">About Application</string>
     <string name="copyright">C.IYOK is an Android application for Shoe Laundry which provides several satisfying services.</string>
     <string name="kembali">return</string>
+    <string name="bagikan">Share</string>
+    <string name="bagikan_resi">Customer Name: %1$s\nCustomer Number: %2$s\nNumber of Shoes: %3$s\nProduction Time: %4$s\nTotal Price: %5$s</string>
 </resources>
