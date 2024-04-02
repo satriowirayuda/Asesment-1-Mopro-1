@@ -32,7 +32,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -82,21 +82,21 @@ fun MainScreen(navController: NavHostController) {
 
 @Composable
 fun ScreenContent(modifier: Modifier) {
-    var namaCustomer by remember { mutableStateOf("") }
-    var namaCustomerEror by remember { mutableStateOf(false) }
-    var nomerCustomer by remember { mutableStateOf("") }
-    var nomerCustomerEror by remember { mutableStateOf(false) }
-    var jumlahSepatu by remember { mutableStateOf("") }
-    var jumlahSepatuEror by remember { mutableStateOf(false) }
+    var namaCustomer by rememberSaveable { mutableStateOf("") }
+    var namaCustomerEror by rememberSaveable { mutableStateOf(false) }
+    var nomerCustomer by rememberSaveable { mutableStateOf("") }
+    var nomerCustomerEror by rememberSaveable { mutableStateOf(false) }
+    var jumlahSepatu by rememberSaveable { mutableStateOf("") }
+    var jumlahSepatuEror by rememberSaveable { mutableStateOf(false) }
 
-    var totalHarga by remember { mutableStateOf("") }
+    var totalHarga by rememberSaveable { mutableStateOf("") }
 
     val radioOptions = listOf(
         stringResource(id = R.string.hari_1),
         stringResource(id = R.string.hari_2),
         stringResource(id = R.string.hari_3),
     )
-    var day by remember { mutableStateOf(radioOptions[0]) }
+    var day by rememberSaveable { mutableStateOf(radioOptions[0]) }
     Column(
         modifier = modifier
             .fillMaxSize()
